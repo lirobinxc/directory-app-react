@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Card extends Component {
-  render() {
-    return (
-      <div className="bg-light-blue w5 dib br2 pa3 ma2 tc grow">
-        <h1>Contact</h1>
-        <img alt="Robin Li" src="https://robohash.org/test" />
-        <div>
-          <h2>Robin Li</h2>
-          <p>lirobinxc@gmail.com</p>
-        </div>
+const Card = ({ name, email, id }) => { //* Notice we use destructuring to replace the (props) parameter to props.name, props.email, props.id*/ {
+  return (
+    <div className="bg-light-blue dib br2 pa3 ma2 tc grow">
+      <h1>Contact</h1>
+      <img alt={`${name}`} src={`https://robohash.org/${id}?200x200`} />
+      <div>
+        <h2>{name}</h2>
+        <p>{email}</p>
       </div>
-    )
-  }
+    </div>);
 }
 
 export default Card;

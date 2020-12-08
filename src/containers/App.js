@@ -24,13 +24,15 @@ class App extends React.Component {
   }
 
   render() {
-    const filteredRobots = this.state.robots.filter(robot => {
-      return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    const {robots, searchfield} = this.state;  // Destructuring: robots = this.state.robots
+
+    const filteredRobots = robots.filter(robot => {
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase())
     })
 
     let cardsSection;
 
-    if (this.state.robots.length === 0) {
+    if (robots.length === 0) {
       cardsSection = <h1 className="tc moon-gray">Loading...</h1>;
     } else {
       cardsSection = <CardList robots={filteredRobots}/>;

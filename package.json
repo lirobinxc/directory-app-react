@@ -17,7 +17,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev-server": "browser-sync start --server 'directory-app-react' --files 'directory-app-react'"
+    "dev-server": "browser-sync start --server 'directory-app-react' --files 'directory-app-react'",
+    "pregit": "git add .",
+    "git": "git commit -m",
+    "postgit": "git push"
   },
   "eslintConfig": {
     "extends": [
